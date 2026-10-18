@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系所簡介 | 慈濟大學經營管理學系</title>
+  <style>
+    :root {
+      --bg-base: #fafaf8;
+      --bg-surface: #ffffff;
+      --text-main: #191d1c;
+      --text-muted: #535d5a;
+      --academic-forest: #16332a;
+      --academic-sand: #967d51;
+      --border-subtle: #e5e8e5;
+      --font-serif: "Noto Serif TC", "Source Han Serif TC", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      width: 90%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--academic-forest);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    nav a.current {
+      color: var(--academic-forest);
+      border-bottom: 2px solid var(--academic-forest);
+      padding-bottom: 4px;
+    }
+    .nav-btn-highlight {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--academic-forest);
+      color: var(--academic-forest) !important;
+      font-weight: 600;
+      border-radius: 2px;
+    }
+    .nav-btn-highlight:hover {
+      background: var(--academic-forest);
+      color: #fff !important;
+    }
+
+    .hero {
+      padding: 4.5rem 0 3rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .hero-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--academic-sand);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--academic-forest);
+      line-height: 1.35;
+      margin-bottom: 1.2rem;
+    }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-bottom: 2rem;
+    }
+    .hero-img-wrap {
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      overflow: hidden;
+    }
+
+    section { padding: 4.5rem 0; }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      color: var(--academic-forest);
+      margin-bottom: 2.5rem;
+    }
+    
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .goal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 2rem 1.6rem;
+      border-top: 3px solid var(--academic-forest);
+    }
+    .goal-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+    .goal-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .facility-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 1.8rem;
+    }
+    .facility-tag {
+      font-size: 0.75rem;
+      color: var(--academic-sand);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .facility-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+    .facility-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .works-cta {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .works-cta h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--academic-forest);
+      margin-bottom: 0.8rem;
+    }
+    .works-cta p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .btn-solid {
+      display: inline-block;
+      padding: 0.65rem 1.8rem;
+      background: var(--academic-forest);
+      color: #fff;
+      font-size: 0.95rem;
+    }
+    .btn-solid:hover { background: var(--academic-sand); }
+
+    footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      padding: 3rem 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導覽列：串聯 studentworks.html -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="brand-title">慈濟大學 經營管理學系</a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="current">系所簡介首頁</a></li>
+          <li><a href="#goals">教育目標</a></li>
+          <li><a href="#facilities">專業空間</a></li>
+          <!-- 連結子頁面 -->
+          <li><a href="studentworks.html" class="nav-btn-highlight">學生專題作品 →</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 系所簡介主視覺 -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-meta">Department Introduction & Philosophy</div>
+        <h1>培育具人文涵養、創新思維<br>與全球視野的卓越商管人才</h1>
+        <p class="hero-desc">
+          慈濟大學經營管理學系著重理論與產業實踐的深度融合，結合翻轉個案討論、智慧科技商務模擬與地方創生，落實企業社會責任（CSR）與專業職場倫理。
+        </p>
+        <div class="hero-img-wrap">
+          <img src="graph/campus-hero.jpg" alt="慈濟大學經營管理學系校園景觀與教學大樓">
+        </div>
+      </div>
+    </section>
+
+    <!-- 四大教育目標 -->
+    <section id="goals">
+      <div class="container">
+        <h2 class="section-title">四大教育目標</h2>
+        <div class="goals-grid">
+          <div class="goal-card">
+            <h3>人文素養與職場倫理</h3>
+            <p>培育具備人文素養與重視職場倫理之商管人才，深植利他心志與商業誠信標準。</p>
+          </div>
+          <div class="goal-card">
+            <h3>創意思考與問題解決</h3>
+            <p>培育具創意思考能力之商管人才，善用邏輯判斷與新興工具應對多變市場挑戰。</p>
+          </div>
+          <div class="goal-card">
+            <h3>團隊合作與領導協作</h3>
+            <p>培育具團隊合作精神之商管人才，透過專題研究與跨領域溝通激發組織綜效。</p>
+          </div>
+          <div class="goal-card">
+            <h3>跨文化與國際視野</h3>
+            <p>培育具跨文化視野之商管人才，推動國際志工實習與全球管理前瞻思維。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 專業教學與實習場域 -->
+    <section id="facilities" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <h2 class="section-title">專業特色教學與實習場域</h2>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-tag">實戰營運</div>
+            <h3>知足咖啡館（實習教室）</h3>
+            <p>外場行銷與經營體驗實習場域，建置專業餐飲服務與點餐管理設備，提供真實商業營運實習。</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-tag">翻轉研習</div>
+            <h3>個案教學研討室</h3>
+            <p>量身打造階梯式互動研習空間，鼓勵多方辯論、策略推演與商業案例實戰激盪。</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-tag">前瞻科技</div>
+            <h3>智慧商店實習空間</h3>
+            <p>打造科技零售實習情境，引導學生熟悉智慧感測、零售大數據分析及無人商店管理運作。</p>
+          </div>
+        </div>
+
+        <!-- 導向學生專題作品頁 -->
+        <div class="works-cta">
+          <h3>深入了解學生的實務專題作品</h3>
+          <p>前往作品專區，閱讀學長姐完整的企劃成果與專案展示。</p>
+          <a href="studentworks.html" class="btn-solid">前往學生專題作品頁 (studentworks.html) →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <p><strong>慈濟大學 經營管理學系</strong></p>
+        <p>地址：970 花蓮市介仁街 67 號（介仁校區）</p>
+        <p>電話：(03) 857-2677 分機 31682｜信箱：ss62@gms.tcu.edu.tw</p>
+      </div>
+      <div>
+        <p>&copy; 2026 慈濟大學經營管理學系 Department of Business Management, TCU.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

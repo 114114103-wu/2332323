@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學生專題作品 | 慈濟大學經營管理學系</title>
+  <style>
+    :root {
+      --bg-base: #fafaf8;
+      --bg-surface: #ffffff;
+      --text-main: #191d1c;
+      --text-muted: #535d5a;
+      --academic-forest: #16332a;
+      --academic-sand: #967d51;
+      --border-subtle: #e5e8e5;
+      --font-serif: "Noto Serif TC", "Source Han Serif TC", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      width: 90%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--academic-forest);
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    nav a.current {
+      color: var(--academic-forest);
+      border-bottom: 2px solid var(--academic-forest);
+      padding-bottom: 4px;
+    }
+
+    .page-head {
+      padding: 4rem 0 2.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--academic-forest);
+      margin-bottom: 0.6rem;
+    }
+    .page-desc { color: var(--text-muted); }
+
+    .works-section { padding: 4rem 0; }
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .work-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+    }
+    .work-img {
+      height: 220px;
+      background: #eaece9;
+      overflow: hidden;
+    }
+    .work-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .work-body {
+      padding: 1.8rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .work-tag {
+      font-size: 0.75rem;
+      color: var(--academic-sand);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .work-body h2 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+    }
+    .work-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      flex-grow: 1;
+    }
+    .work-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 0.8rem;
+    }
+
+    footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 導覽列：串聯 index.html -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="brand-title">慈濟大學 經營管理學系</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">← 返回系所首頁</a></li>
+          <li><a href="studentworks.html" class="current">學生專題作品</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-head">
+    <div class="container">
+      <h1 class="page-title">學生實作專題與競賽作品</h1>
+      <p class="page-desc">展示經管系學生在地方創生、永續循環經濟與人工智慧科技應用的各項專案成果。</p>
+    </div>
+  </div>
+
+  <main class="works-section">
+    <div class="container">
+      <div class="works-grid">
+
+        <article class="work-card">
+          <div class="work-img">
+            <img src="graph/project-heart.jpg" alt="嶼食織心專案成果展示">
+          </div>
+          <div class="work-body">
+            <div class="work-tag">地方創生 · 產業鏈結</div>
+            <h2>嶼食織心：地方特色與飲食創生提案</h2>
+            <p>深入花蓮在地農業，結合品牌行銷與文化資源，提出具地方特色的永續商業行動方案。</p>
+            <div class="work-meta">指導老師：林信宏 老師｜入選 2026 花蓮青年鏈結地方產業成果補助</div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-img">
+            <img src="graph/project-bsf.jpg" alt="黑水虻處理沼渣廢棄物專案">
+          </div>
+          <div class="work-body">
+            <div class="work-tag">循環經濟 · 永續管理</div>
+            <h2>黑水虻處理沼渣廢棄物之可行性評估</h2>
+            <p>探索農業廢棄物生物轉化之商業模式，提出永續資源再利用之營運規劃。</p>
+            <div class="work-meta">指導老師：蘇美惠 老師｜榮獲 2025 全國經營管理專題競賽 第二名</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 慈濟大學經營管理學系 Department of Business Management, TCU.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
