@@ -70,6 +70,15 @@
       padding-bottom: 4px;
     }
 
+    /* 寬幅 Banner 樣式 */
+    .banner-container {
+      width: 100%;
+      aspect-ratio: 5 / 1;
+      background-image: url('banner.jpg'); /* 請依據您的檔名或路徑調整 */
+      background-size: cover;
+      background-position: center right;
+    }
+
     .page-head {
       padding: 4rem 0 2.5rem;
       border-bottom: 1px solid var(--border-subtle);
@@ -159,6 +168,9 @@
       </nav>
     </div>
   </header>
+
+  <!-- 1:5 寬幅橫幅區塊 -->
+  <div class="banner-container"></div>
 
   <div class="page-head">
     <div class="container">
