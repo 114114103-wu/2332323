@@ -88,6 +88,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
+      align-items: start;
     }
     .work-card {
       background: var(--bg-surface);
@@ -99,14 +100,29 @@
     }
     
     .work-img {
-      height: 220px;
-      background: #eaece9;
+      height: 240px;
+      background: #f0f2f0;
       overflow: hidden;
     }
     .work-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    /* 針對直向完整照片的專用外框 */
+    .work-img-contain {
+      height: 360px;
+      background: #f4f5f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .work-img-contain img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* 關鍵：完整顯示整張圖、不被任何裁切 */
     }
 
     .work-body {
@@ -188,10 +204,10 @@
           </div>
         </article>
 
-        <!-- 👇 第二個作品：已經替換成你問的那段 code，把高度調成 300px 讓 plant.jpg 不會被裁太嚴重 -->
+        <!-- 第二個作品：完整呈現 plant.jpg（不裁切） -->
         <article class="work-card">
-          <div class="work-img" style="height: 300px;">
-            <img src="graph/plant.jpg" alt="黑水虻處理沼渣廢棄物專案照片" style="object-fit: cover; object-position: center;">
+          <div class="work-img-contain">
+            <img src="graph/plant.jpg" alt="黑水虻處理沼渣廢棄物專案照片">
           </div>
           <div class="work-body">
             <div class="work-tag">循環經濟 · 永續管理</div>
