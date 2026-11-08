@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>學生專題作品 | 慈濟大學經營管理學系</title>
+  
+  <!-- Internal CSS -->
   <style>
     :root {
       --bg-base: #fafaf8;
@@ -70,15 +72,6 @@
       padding-bottom: 4px;
     }
 
-    /* 寬幅 Banner 樣式 */
-    .banner-container {
-      width: 100%;
-      aspect-ratio: 5 / 1;
-      background-image: url('banner.jpg'); /* 請依據您的檔名或路徑調整 */
-      background-size: cover;
-      background-position: center right;
-    }
-
     .page-head {
       padding: 4rem 0 2.5rem;
       border-bottom: 1px solid var(--border-subtle);
@@ -91,6 +84,7 @@
     }
     .page-desc { color: var(--text-muted); }
 
+    /* 作品卡片排版與圖片位置 */
     .works-section { padding: 4rem 0; }
     .works-grid {
       display: grid;
@@ -102,7 +96,11 @@
       border: 1px solid var(--border-subtle);
       display: flex;
       flex-direction: column;
+      border-radius: 4px;
+      overflow: hidden;
     }
+    
+    /* 圖片外框：控制圖片在卡片頂端呈現固定高度 */
     .work-img {
       height: 220px;
       background: #eaece9;
@@ -113,6 +111,7 @@
       height: 100%;
       object-fit: cover;
     }
+
     .work-body {
       padding: 1.8rem;
       flex-grow: 1;
@@ -156,7 +155,7 @@
 </head>
 <body>
 
-  <!-- 導覽列：串聯 index.html -->
+  <!-- 頂部導覽列：可連回 index.html -->
   <header>
     <div class="container nav-container">
       <a href="index.html" class="brand-title">慈濟大學 經營管理學系</a>
@@ -169,9 +168,6 @@
     </div>
   </header>
 
-  <!-- 1:5 寬幅橫幅區塊 -->
-  <div class="banner-container"></div>
-
   <div class="page-head">
     <div class="container">
       <h1 class="page-title">學生實作專題與競賽作品</h1>
@@ -183,9 +179,10 @@
     <div class="container">
       <div class="works-grid">
 
+        <!-- 作品 1：使用相對路徑 graph/talk.jpg 放在卡片頂端 -->
         <article class="work-card">
           <div class="work-img">
-            <img src="graph/project-heart.jpg" alt="嶼食織心專案成果展示">
+            <img src="graph/talk.jpg" alt="講座與專題成果發表研討照片">
           </div>
           <div class="work-body">
             <div class="work-tag">地方創生 · 產業鏈結</div>
@@ -195,9 +192,10 @@
           </div>
         </article>
 
+        <!-- 作品 2：使用相對路徑 graph/plant.jpg 放在卡片頂端 -->
         <article class="work-card">
           <div class="work-img">
-            <img src="graph/project-bsf.jpg" alt="黑水虻處理沼渣廢棄物專案">
+            <img src="graph/plant.jpg" alt="永續植物循環評估專案照片">
           </div>
           <div class="work-body">
             <div class="work-tag">循環經濟 · 永續管理</div>
@@ -217,5 +215,8 @@
     </div>
   </footer>
 
+  <script>
+    console.log("studentworks.html 載入成功");
+  </script>
 </body>
 </html>
