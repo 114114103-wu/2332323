@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>學生專題作品 | 慈濟大學經營管理學系</title>
   
-  <!-- Internal CSS -->
   <style>
     :root {
       --bg-base: #fafaf8;
@@ -84,7 +83,6 @@
     }
     .page-desc { color: var(--text-muted); }
 
-    /* 作品卡片排版與圖片位置 */
     .works-section { padding: 4rem 0; }
     .works-grid {
       display: grid;
@@ -100,7 +98,6 @@
       overflow: hidden;
     }
     
-    /* 圖片外框：控制圖片在卡片頂端呈現固定高度 */
     .work-img {
       height: 220px;
       background: #eaece9;
@@ -155,7 +152,6 @@
 </head>
 <body>
 
-  <!-- 頂部導覽列：可連回 index.html -->
   <header>
     <div class="container nav-container">
       <a href="index.html" class="brand-title">慈濟大學 經營管理學系</a>
@@ -179,7 +175,7 @@
     <div class="container">
       <div class="works-grid">
 
-        <!-- 作品 1：使用相對路徑 graph/talk.jpg 放在卡片頂端 -->
+        <!-- 第一個作品：talk.jpg -->
         <article class="work-card">
           <div class="work-img">
             <img src="graph/talk.jpg" alt="講座與專題成果發表研討照片">
@@ -192,10 +188,10 @@
           </div>
         </article>
 
-        <!-- 作品 2：使用相對路徑 graph/plant.jpg 放在卡片頂端 -->
+        <!-- 👇 第二個作品：已經替換成你問的那段 code，把高度調成 300px 讓 plant.jpg 不會被裁太嚴重 -->
         <article class="work-card">
-          <div class="work-img">
-            <img src="graph/plant.jpg" alt="永續植物循環評估專案照片">
+          <div class="work-img" style="height: 300px;">
+            <img src="graph/plant.jpg" alt="黑水虻處理沼渣廢棄物專案照片" style="object-fit: cover; object-position: center;">
           </div>
           <div class="work-body">
             <div class="work-tag">循環經濟 · 永續管理</div>
@@ -215,8 +211,5 @@
     </div>
   </footer>
 
-  <script>
-    console.log("studentworks.html 載入成功");
-  </script>
 </body>
 </html>
