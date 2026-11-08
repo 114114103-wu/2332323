@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>系所簡介 | 慈濟大學經營管理學系</title>
+  
+  <!-- Internal CSS -->
   <style>
     :root {
       --bg-base: #fafaf8;
@@ -35,6 +37,7 @@
       padding: 0 1rem;
     }
 
+    /* 頂部導覽列 */
     header {
       background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid var(--border-subtle);
@@ -82,6 +85,7 @@
       color: #fff !important;
     }
 
+    /* Hero 主視覺區 */
     .hero {
       padding: 4.5rem 0 3rem;
       border-bottom: 1px solid var(--border-subtle);
@@ -107,12 +111,22 @@
       max-width: 820px;
       margin-bottom: 2rem;
     }
+    
+    /* 圖片外框設定：控制圖片在畫面的位置與高度 */
     .hero-img-wrap {
       border: 1px solid var(--border-subtle);
       background: var(--bg-surface);
       overflow: hidden;
+      max-height: 480px;
+      border-radius: 4px;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
+    /* 區塊排版 */
     section { padding: 4.5rem 0; }
     .section-title {
       font-family: var(--font-serif);
@@ -210,7 +224,7 @@
 </head>
 <body>
 
-  <!-- 導覽列：串聯 studentworks.html -->
+  <!-- 頂部導覽列：順暢連結至 studentworks.html -->
   <header>
     <div class="container nav-container">
       <a href="index.html" class="brand-title">慈濟大學 經營管理學系</a>
@@ -219,7 +233,6 @@
           <li><a href="index.html" class="current">系所簡介首頁</a></li>
           <li><a href="#goals">教育目標</a></li>
           <li><a href="#facilities">專業空間</a></li>
-          <!-- 連結子頁面 -->
           <li><a href="studentworks.html" class="nav-btn-highlight">學生專題作品 →</a></li>
         </ul>
       </nav>
@@ -227,7 +240,7 @@
   </header>
 
   <main>
-    <!-- 系所簡介主視覺 -->
+    <!-- 首頁主視覺區（放置 class.jpg） -->
     <section class="hero">
       <div class="container">
         <div class="hero-meta">Department Introduction & Philosophy</div>
@@ -235,8 +248,10 @@
         <p class="hero-desc">
           慈濟大學經營管理學系著重理論與產業實踐的深度融合，結合翻轉個案討論、智慧科技商務模擬與地方創生，落實企業社會責任（CSR）與專業職場倫理。
         </p>
+        
+        <!-- 相對路徑讀取 graph/class.jpg -->
         <div class="hero-img-wrap">
-          <img src="graph/campus-hero.jpg" alt="慈濟大學經營管理學系校園景觀與教學大樓">
+          <img src="graph/class.jpg" alt="慈濟大學經營管理學系教學環境照片">
         </div>
       </div>
     </section>
@@ -288,7 +303,6 @@
           </div>
         </div>
 
-        <!-- 導向學生專題作品頁 -->
         <div class="works-cta">
           <h3>深入了解學生的實務專題作品</h3>
           <p>前往作品專區，閱讀學長姐完整的企劃成果與專案展示。</p>
@@ -311,5 +325,8 @@
     </div>
   </footer>
 
+  <script>
+    console.log("index.html 載入成功");
+  </script>
 </body>
 </html>
